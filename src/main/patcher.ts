@@ -44,9 +44,7 @@ if (!IS_VANILLA) {
     const settings = RendererSettings.store;
 
     // Repatch after host updates on Windows and Linux
-    if (process.platform === "win32" || process.platform === "linux") {
-        require("./persistAfterDiscordUpdates");
-    }
+    require("./persistAfterDiscordUpdates");
 
     if (process.platform === "win32" && settings.winCtrlQ) {
         const originalBuild = Menu.buildFromTemplate;
